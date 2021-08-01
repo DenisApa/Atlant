@@ -1,0 +1,35 @@
+.header {
+	&__inner {
+		display: flex;
+		align-items: center;
+		min-height: 72px;
+	}
+	&__logo {
+		flex: 0 0 auto;
+	}
+}
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1 1 auto;
+	&__link {
+		color: #18191F;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 143%;
+
+		padding: 5px;
+		margin-left: 22px;
+
+		transition: color ease .5s;
+		&:hover:not(:last-child) {
+			color: #183181;
+		}
+	}
+	.btn {
+		border-radius: 8px;
+	}
+}
