@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @import "__header.scss";
+@import "__footer.scss";
 
 * {
 	margin: 0;
@@ -194,8 +195,12 @@ img {
 		flex-direction: column;
 		transition: ease .5s;
 		&:hover {
-			box-shadow: 5px 5px 10px rgba(24, 25, 31, 0.5);
+			box-shadow: 3px 3px 5px rgba(24, 25, 31, 0.5);
 			transform: scale(95%);
+
+			.build__name {
+				opacity: 1;
+			}
 		}
 	}
 	&__item--warehouses {
@@ -240,6 +245,9 @@ img {
 
 		padding: 13px 20px;
 		margin-top: auto;
+
+		opacity: 0;
+		transition: ease .5s;
 	}
 }
 
