@@ -4,8 +4,12 @@
 		align-items: center;
 		min-height: 72px;
 	}
-	&__logo {
+	&__logo-max {
 		flex: 0 0 auto;
+	}
+	&__logo-min {
+		flex: 0 0 auto;
+		display: none;
 	}
 }
 
@@ -31,5 +35,22 @@
 	}
 	.btn {
 		border-radius: 8px;
+	}
+}
+
+@media screen and(max-width: 890px){
+	.header {
+		&__inner {
+			min-height: 50px;
+		}
+		&__logo-max {
+			display: none;
+		}
+		&__logo-min {
+			display: block;
+		}
+	}
+	.nav {
+		display: none;
 	}
 }
