@@ -403,6 +403,9 @@ img {
 
 .build {
   margin-bottom: 90px;
+  background: url("../img/Circle.png") no-repeat;
+  background-position-x: 98%;
+  background-size: contain;
 }
 
 .build .section-title {
@@ -412,12 +415,13 @@ img {
 .build__inner {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 1fr))[4];
-      grid-template-columns: repeat(4, minmax(150px, 1fr));
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
-  gap: 20px;
-  min-height: 675px;
+  -ms-grid-columns: (minmax(255px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  -ms-grid-rows: (minmax(200px, 1fr))[auto-fill];
+      grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 65px;
 }
 
 .build__item {
@@ -428,90 +432,77 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: ease .5s;
-  transition: ease .5s;
+  min-height: 200px;
+  padding: 24px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+          box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+  border-radius: 8px;
+  position: relative;
+  -webkit-transition: -webkit-transform ease .5s;
+  transition: -webkit-transform ease .5s;
+  transition: transform ease .5s;
+  transition: transform ease .5s, -webkit-transform ease .5s;
 }
 
 .build__item:hover {
-  -webkit-box-shadow: 3px 3px 5px rgba(24, 25, 31, 0.5);
-          box-shadow: 3px 3px 5px rgba(24, 25, 31, 0.5);
   -webkit-transform: scale(95%);
           transform: scale(95%);
 }
 
-.build__item:hover .build__name {
-  opacity: 1;
+.build__icons {
+  margin-top: auto;
 }
 
-.build__item--warehouses {
-  background: url("../img/build-warehouses.jpg") center/cover no-repeat;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  grid-row: 1/5;
-}
-
-.build__item--chambers {
-  background: url("../img/build-chambers.jpg") center/cover no-repeat;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-}
-
-.build__item--logistics {
-  background: url("../img/build-logistics.jpg") center/cover no-repeat;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  grid-row: 1/4;
-}
-
-.build__item--premises {
-  background: url("../img/buld-premises.jpg") center/cover no-repeat;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-}
-
-.build__item--commercial {
-  background: url("../img/build-commercial.jpg") center/cover no-repeat;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 2;
-  grid-row: 5/7;
-}
-
-.build__item--panels {
-  background: url("../img/build-panels.jpg") center/cover no-repeat;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 4;
-  grid-row: 3/7;
-}
-
-.build__item--constructions {
-  background: url("../img/build-constructions.jpg") center/cover no-repeat;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 3;
-  grid-row: 4/7;
-}
-
-.build__item--reconstruct {
-  background: url("../img/build-reconstruct.jpg") center/cover no-repeat;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 4;
-  grid-row: 3/7;
+.build__img {
+  position: absolute;
 }
 
 .build__name {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  background: #242A78;
-  padding: 13px 20px;
-  margin-top: auto;
-  opacity: 0;
-  -webkit-transition: ease .5s;
-  transition: ease .5s;
+  color: #18191F;
+  font-size: 24px;
+  line-height: 133%;
+  font-weight: 600;
+}
+
+.build__item--warehouses .build__img {
+  right: 0;
+  bottom: -44px;
+}
+
+.build__item--chambers .build__img {
+  right: 0;
+  bottom: 0;
+}
+
+.build__item--logistics .build__img {
+  right: -20px;
+  bottom: 12px;
+}
+
+.build__item--premises .build__img {
+  right: -13px;
+  bottom: -25px;
+}
+
+.build__item--commercial .build__img {
+  right: 0;
+  bottom: 0;
+}
+
+.build__item--constructions .build__img {
+  right: -21px;
+  bottom: -27px;
+}
+
+.build__item--panels .build__img {
+  right: -28px;
+  bottom: -11px;
+}
+
+.build__item--reconstruct .build__img {
+  right: -26px;
+  bottom: -29px;
 }
 
 .about__inner {
@@ -932,14 +923,15 @@ img {
   grid-row: 3/5;
 }
 
-@media screen and (max-width: 1024px) {
-  .build__inner {
-    gap: 15px;
+@media screen and (min-width: 1920px) {
+  .build {
+    background-position-x: 80%;
   }
-  .build__name {
-    font-size: 14px;
-    padding: 10px;
-    opacity: 1;
+}
+
+@media screen and (min-width: 2560px) {
+  .build {
+    background-position-x: 78%;
   }
 }
 
@@ -973,40 +965,6 @@ img {
   .intro__inner {
     max-width: 400px;
   }
-  .build__inner {
-    -ms-grid-columns: (minmax(150px, 1fr))[2];
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
-    -ms-grid-rows: (300px)[auto-fill];
-        grid-template-rows: repeat(auto-fill, 300px);
-  }
-  .build__item {
-    min-height: 300px;
-  }
-  .build__item--warehouses {
-    grid-row: auto;
-  }
-  .build__item--chambers {
-    grid-row: auto;
-  }
-  .build__item--logistics {
-    grid-row: auto;
-  }
-  .build__item--premises {
-    grid-row: auto;
-  }
-  .build__item--commercial {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .build__item--panels {
-    grid-row: auto;
-  }
-  .build__item--constructions {
-    grid-row: auto;
-  }
-  .build__item--reconstruct {
-    grid-row: auto;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1019,14 +977,5 @@ img {
   }
   .facts__number {
     font-size: 42px;
-  }
-  .build__inner {
-    -ms-grid-columns: (minmax(137px, 1fr))[2];
-        grid-template-columns: repeat(2, minmax(137px, 1fr));
-    -ms-grid-rows: (220px)[auto-fill];
-        grid-template-rows: repeat(auto-fill, 220px);
-  }
-  .build__item {
-    min-height: 220px;
   }
 }

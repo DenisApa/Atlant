@@ -179,75 +179,97 @@ img {
 // Build
 .build {
 	margin-bottom: 90px;
+
+	background: url('../img/Circle.png') no-repeat;
+	background-position-x: 98%;
+	background-size: contain;
 	.section-title {
 		margin-bottom: 50px;
 	}
 	&__inner {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(150px, 1fr));
-		grid-template-rows: repeat(6, 1fr);
-		gap: 20px;
-
-		min-height: 675px;
+		grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+		column-gap: 30px;
+		row-gap: 65px;
 	}
 	&__item {
 		display: flex;
 		flex-direction: column;
-		transition: ease .5s;
-		&:hover {
-			box-shadow: 3px 3px 5px rgba(24, 25, 31, 0.5);
-			transform: scale(95%);
 
-			.build__name {
-				opacity: 1;
-			}
+		min-height: 200px;
+		padding: 24px;
+
+		background: #fff;
+		box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+		border-radius: 8px;
+
+		position: relative;
+
+		transition: transform ease .5s;
+		&:hover {
+			transform: scale(95%);
 		}
 	}
-	&__item--warehouses {
-		background: url('../img/build-warehouses.jpg') center/cover no-repeat;
-		grid-row: 1/5;
+	&__icons {
+		margin-top: auto;
 	}
-	&__item--chambers {
-		background: url('../img/build-chambers.jpg') center/cover no-repeat;
-		grid-row: 1/3;
-	}
-	&__item--logistics {
-		background: url('../img/build-logistics.jpg') center/cover no-repeat;
-		grid-row: 1/4;
-	}
-	&__item--premises {
-		background: url('../img/buld-premises.jpg') center/cover no-repeat;
-		grid-row: 1/3;
-	}
-	&__item--commercial {
-		background: url('../img/build-commercial.jpg') center/cover no-repeat;
-		grid-column: 1/2;
-		grid-row: 5/7;
-	}
-	&__item--panels {
-		background: url('../img/build-panels.jpg') center/cover no-repeat;
-		grid-row: 3/7;
-	}
-	&__item--constructions {
-		background: url('../img/build-constructions.jpg') center/cover no-repeat;
-		grid-row: 4/7;
-	}
-	&__item--reconstruct {
-		background: url('../img/build-reconstruct.jpg') center/cover no-repeat;
-		grid-row: 3/7;
+	&__img {
+		position: absolute;
 	}
 	&__name {
-		color: #fff;
-		font-size: 18px;
-		font-weight: 500;
-
-		background: #242A78;
-
-		padding: 13px 20px;
-		margin-top: auto;
-
-		opacity: 0;
-		transition: ease .5s;
+		color: #18191F;
+		font-size: 24px;
+		line-height: 133%;
+		font-weight: 600;
+	}
+	&__item--warehouses {
+		.build__img {
+			right: 0;
+			bottom: -44px;
+		}
+	}
+	&__item--chambers {
+		.build__img {
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__item--logistics {
+		.build__img {
+			right: -20px;
+			bottom: 12px;
+		}
+	}
+	&__item--premises {
+		.build__img {
+			right: -13px;
+			bottom: -25px;
+		}
+	}
+	&__item--commercial {
+		.build__img {
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__item--constructions {
+		.build__img {
+			right: -21px;
+			bottom: -27px;
+		}
+	}
+	&__item--panels {
+		.build__img {
+			right: -28px;
+			bottom: -11px;
+		}
+	}
+	&__item--reconstruct {
+		.build__img {
+			right: -26px;
+			bottom: -29px;
+		}
 	}
 }
 
@@ -570,18 +592,20 @@ img {
 	}
 }
 
-@media screen and (max-width: 1024px) {
-	.build {
-		&__inner {
-			gap: 15px;
-		}
-		&__name {
-			font-size: 14px;
-			padding: 10px;
 
-			opacity: 1;
-		}
+@media screen and (min-width: 1920px) {
+	.build {
+		background-position-x: 80%;
 	}
+}
+@media screen and (min-width: 2560px) {
+	.build {
+		background-position-x: 78%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	
 }
 
 @media screen and(max-width: 890px){
@@ -616,40 +640,7 @@ img {
 			max-width: 400px;
 		}
 	}
-	.build {
-		&__inner {
-			grid-template-columns: repeat(2, minmax(150px, 1fr));
-			grid-template-rows: repeat(auto-fill, 300px);
-		}
-		&__item {
-			min-height: 300px;
-		}
-		&__item--warehouses {
-			grid-row: auto;
-		}
-		&__item--chambers {
-			grid-row: auto;
-		}
-		&__item--logistics {
-			grid-row: auto;
-		}
-		&__item--premises {
-			grid-row: auto;
-		}
-		&__item--commercial {
-			grid-column: auto;
-			grid-row: auto;
-		}
-		&__item--panels {
-			grid-row: auto;
-		}
-		&__item--constructions {
-			grid-row: auto;
-		}
-		&__item--reconstruct {
-			grid-row: auto;
-		}
-	}
+	
 	
 }
 
@@ -666,13 +657,5 @@ img {
 			font-size: 42px;
 		}
 	}
-	.build {
-		&__inner {
-			grid-template-columns: repeat(2, minmax(137px, 1fr));
-			grid-template-rows: repeat(auto-fill, 220px);
-		}
-		&__item {
-			min-height: 220px;
-		}
-	}
+	
 }
