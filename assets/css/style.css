@@ -477,12 +477,12 @@ img {
 }
 
 .build__item--logistics .build__img {
-  right: -16px;
+  right: -10px;
   bottom: 12px;
 }
 
 .build__item--premises .build__img {
-  right: -13px;
+  right: -10px;
   bottom: -25px;
 }
 
@@ -502,7 +502,7 @@ img {
 }
 
 .build__item--reconstruct .build__img {
-  right: -14px;
+  right: -10px;
   bottom: -29px;
 }
 
