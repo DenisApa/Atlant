@@ -492,13 +492,13 @@ img {
 }
 
 .build__item--constructions .build__img {
-  right: -16px;
+  right: 0;
   bottom: -27px;
 }
 
 .build__item--panels .build__img {
-  right: -16px;
-  bottom: -11px;
+  right: -10px;
+  bottom: -2px;
 }
 
 .build__item--reconstruct .build__img {
