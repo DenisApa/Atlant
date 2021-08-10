@@ -422,6 +422,7 @@ img {
   -webkit-column-gap: 30px;
           column-gap: 30px;
   row-gap: 65px;
+  position: static;
 }
 
 .build__item {
@@ -476,7 +477,7 @@ img {
 }
 
 .build__item--logistics .build__img {
-  right: -20px;
+  right: -16px;
   bottom: 12px;
 }
 
@@ -491,17 +492,17 @@ img {
 }
 
 .build__item--constructions .build__img {
-  right: -21px;
+  right: -16px;
   bottom: -27px;
 }
 
 .build__item--panels .build__img {
-  right: -28px;
+  right: -16px;
   bottom: -11px;
 }
 
 .build__item--reconstruct .build__img {
-  right: -26px;
+  right: -16px;
   bottom: -29px;
 }
 
@@ -766,11 +767,15 @@ img {
 .gallery__inner {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(290px, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(290px, 1fr));
-  -ms-grid-rows: (minmax(350px, 1fr))[2];
-      grid-template-rows: repeat(2, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(290px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  -ms-grid-rows: (minmax(200px, 1fr))[auto-fill];
+      grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
+}
+
+.gallery__img {
+  height: 350px;
 }
 
 .gallery__img:nth-child(1) {
@@ -970,6 +975,9 @@ img {
   }
   .intro__inner {
     max-width: 400px;
+  }
+  .gallery__img {
+    height: 275px;
   }
 }
 

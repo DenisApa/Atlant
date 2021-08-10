@@ -192,6 +192,8 @@ img {
 		grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
 		column-gap: 30px;
 		row-gap: 65px;
+
+		position: static;
 	}
 	&__item {
 		display: flex;
@@ -237,7 +239,7 @@ img {
 	}
 	&__item--logistics {
 		.build__img {
-			right: -20px;
+			right: -16px;
 			bottom: 12px;
 		}
 	}
@@ -255,19 +257,19 @@ img {
 	}
 	&__item--constructions {
 		.build__img {
-			right: -21px;
+			right: -16px;
 			bottom: -27px;
 		}
 	}
 	&__item--panels {
 		.build__img {
-			right: -28px;
+			right: -16px;
 			bottom: -11px;
 		}
 	}
 	&__item--reconstruct {
 		.build__img {
-			right: -26px;
+			right: -16px;
 			bottom: -29px;
 		}
 	}
@@ -496,9 +498,12 @@ img {
 	}
 	&__inner {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(290px, 1fr));
-		grid-template-rows: repeat(2, minmax(350px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
 		gap: 30px;
+	}
+	&__img {
+		height: 350px;
 	}
 	&__img:nth-child(1) {
 		background: url('../img/gallery-img1.jpg') center/cover no-repeat;
@@ -642,8 +647,11 @@ img {
 			max-width: 400px;
 		}
 	}
-	
-	
+	.gallery {
+		&__img {
+			height: 275px;
+		}
+	}
 }
 
 @media screen and(max-width: 480px){
