@@ -648,8 +648,12 @@ img {
 		}
 	}
 	.gallery {
+		&__inner {
+			grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+			gap: 15px;
+		}
 		&__img {
-			height: 275px;
+			height: 250px;
 		}
 	}
 }
@@ -667,5 +671,13 @@ img {
 			font-size: 42px;
 		}
 	}
-	
+	.gallery {
+		&__inner {
+			grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+			grid-template-rows: repeat(auto-fill, minmax(135px, 1fr));
+		}
+		&__img {
+			height: 135px;
+		}
+	}
 }

@@ -976,8 +976,13 @@ img {
   .intro__inner {
     max-width: 400px;
   }
+  .gallery__inner {
+    -ms-grid-columns: (minmax(215px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 15px;
+  }
   .gallery__img {
-    height: 275px;
+    height: 250px;
   }
 }
 
@@ -991,5 +996,14 @@ img {
   }
   .facts__number {
     font-size: 42px;
+  }
+  .gallery__inner {
+    -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    -ms-grid-rows: (minmax(135px, 1fr))[auto-fill];
+        grid-template-rows: repeat(auto-fill, minmax(135px, 1fr));
+  }
+  .gallery__img {
+    height: 135px;
   }
 }
