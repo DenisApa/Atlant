@@ -131,6 +131,15 @@
 .footer .social-links li {
   list-style: none;
   margin-right: 16px;
+  -webkit-transition: -webkit-transform ease .5s;
+  transition: -webkit-transform ease .5s;
+  transition: transform ease .5s;
+  transition: transform ease .5s, -webkit-transform ease .5s;
+}
+
+.footer .social-links li:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
 }
 
 .footer__block-group {
