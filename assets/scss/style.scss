@@ -616,6 +616,9 @@ img {
 }
 
 @media screen and(max-width: 890px){
+	.intro {
+		margin-top: 50px;
+	}
 	.facts {
 		&__inner {
 			flex-wrap: wrap;

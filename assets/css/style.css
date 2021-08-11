@@ -65,6 +65,7 @@
 @media screen and (max-width: 890px) {
   .header {
     position: fixed;
+    top: 0;
     z-index: 100;
     width: 100%;
     max-width: 100%;
@@ -1034,6 +1035,9 @@ img {
 }
 
 @media screen and (max-width: 890px) {
+  .intro {
+    margin-top: 50px;
+  }
   .facts__inner {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
