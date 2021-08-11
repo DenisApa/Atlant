@@ -275,6 +275,64 @@ img {
 	}
 }
 
+// Projects 
+.projects {
+	padding: 80px 0;
+	.section-title {
+		margin-bottom: 50px;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		border-bottom: 2px solid #F4F5F7;
+
+		width: 100%;
+		max-width: calc((100% - 110px) / 2);
+		min-width: 290px;
+		padding-bottom: 35px;
+		margin-bottom: 80px;
+	}
+	.item-title {
+		flex: 1 1 auto;
+
+		min-height: 80px;
+		margin-bottom: 15px;
+	}
+	&__img {
+		flex: 1 1 auto;
+		border-radius: 8px;
+
+		max-width: 100%;
+		max-height: 375px;
+		height: auto;
+		margin-bottom: 35px;
+	}
+	&__date {
+		font-size: 14px;
+		line-height: 129%;
+		font-weight: 800;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	.btn {
+		border-radius: 100px;
+	}
+	&__btn {
+		text-align: right;
+		margin-left: auto;
+	}
+	&__all {
+		margin: 0 auto;
+	}
+}
+
 // About 
 .about {
 	&__inner {
@@ -342,63 +400,6 @@ img {
 	
 }
 
-// Projects 
-.projects {
-	padding: 80px 0;
-	.section-title {
-		margin-bottom: 50px;
-	}
-	&__inner {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	&__item {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-
-		border-bottom: 2px solid #F4F5F7;
-
-		width: 100%;
-		max-width: calc((100% - 110px) / 2);
-		min-width: 290px;
-		padding-bottom: 35px;
-		margin-bottom: 80px;
-	}
-	.item-title {
-		flex: 1 1 auto;
-
-		min-height: 80px;
-		margin-bottom: 15px;
-	}
-	&__img {
-		flex: 1 1 auto;
-		border-radius: 8px;
-
-		max-width: 100%;
-		max-height: 375px;
-		height: auto;
-		margin-bottom: 35px;
-	}
-	&__date {
-		font-size: 14px;
-		line-height: 129%;
-		font-weight: 800;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
-	.btn {
-		border-radius: 100px;
-	}
-	&__btn {
-		text-align: right;
-		margin-left: auto;
-	}
-	&__all {
-		margin: 0 auto;
-	}
-}
 
 // Commercial
 .commercial {
@@ -409,7 +410,7 @@ img {
 
 		min-height: 399px;
 
-		padding: 40px 48px;
+		padding: 40px 448px 40px 48px;
 
 		position: relative;
 	}
@@ -450,7 +451,7 @@ img {
 
 // Gallery
 .gallery {
-	padding: 80px 0;
+	padding-bottom: 80px;
 	.section-title3 {
 		margin-bottom: 48px;
 	}
@@ -611,6 +612,19 @@ img {
 		}
 		&__link {
 			color: #183181;
+		}
+	}
+	.commercial {
+		&__inner {
+			padding-right: 388px;
+		}
+		&__img {
+			right: 55px;
+			transform: translate(0, -80%);
+		}
+		&__img--screen {
+			right: 75px;
+			transform: translate(0, -82%);
 		}
 	}
 }
