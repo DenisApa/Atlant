@@ -612,14 +612,14 @@ img {
 }
 
 .projects__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+  -webkit-column-gap: 110px;
+          column-gap: 110px;
+  row-gap: 80px;
+  margin-bottom: 80px;
 }
 
 .projects__item {
@@ -633,10 +633,7 @@ img {
           align-items: center;
   border-bottom: 2px solid #F4F5F7;
   width: 100%;
-  max-width: calc((100% - 110px) / 2);
-  min-width: 290px;
   padding-bottom: 35px;
-  margin-bottom: 80px;
 }
 
 .projects .item-title {
@@ -676,7 +673,7 @@ img {
 }
 
 .projects__all {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .about__inner {
@@ -1095,13 +1092,14 @@ img {
   .intro__inner {
     max-width: 400px;
   }
-  .gallery__inner {
-    -ms-grid-columns: (minmax(215px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-    gap: 15px;
+  .projects__inner {
+    -ms-grid-columns: (minmax(175px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(175px, 1fr));
+    gap: 40px;
   }
-  .gallery__img {
-    height: 250px;
+  .projects .item-title {
+    font-size: 21px;
+    min-height: 55px;
   }
   .trust__inner {
     -ms-grid-columns: (minmax(100px, 1fr))[3];
@@ -1147,6 +1145,14 @@ img {
     grid-column: auto;
     grid-row: auto;
   }
+  .gallery__inner {
+    -ms-grid-columns: (minmax(215px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 15px;
+  }
+  .gallery__img {
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1159,6 +1165,10 @@ img {
   }
   .facts__number {
     font-size: 42px;
+  }
+  .projects__inner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .gallery__inner {
     -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
