@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+.header {
+  background: #fff;
+}
+
 .header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +63,14 @@
 }
 
 @media screen and (max-width: 890px) {
+  .header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+            box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+  }
   .header__inner {
     min-height: 50px;
   }
