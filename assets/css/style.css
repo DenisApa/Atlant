@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 /* nav toggle */
 .nav-toggle {
+  display: none;
   cursor: pointer;
   position: absolute;
   right: 15px;
@@ -90,6 +91,12 @@
   margin: auto 0;
   padding: 0;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
 }
 
 .header {
@@ -1190,9 +1197,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .section {
-    padding: 40px 0;
-  }
   .section-title {
     font-size: 40px;
   }

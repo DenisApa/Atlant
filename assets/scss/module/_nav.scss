@@ -1,5 +1,6 @@
 /* nav toggle */
 .nav-toggle {
+	display: none;
 	cursor: pointer;
 
 	position: absolute;
@@ -55,5 +56,11 @@
 		margin: auto 0;
 		padding: 0;
 		text-align: center;
+	}
+}
+
+@media screen and(max-width: 768px) {
+	.nav-toggle {
+		display: block;
 	}
 }
